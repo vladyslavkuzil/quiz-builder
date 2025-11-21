@@ -1,50 +1,39 @@
-.container {
+.listContainer {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 40px auto;
     padding: 20px;
 }
 
 .quizItem {
+    background: white;
+    padding: 18px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    border: 1px solid #eee;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px;
-    border: 1px solid #ccc;
+    transition: box-shadow 0.2s ease;
+}
+
+.quizItem:hover {
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.deleteBtn {
+    background: #dc3545;
+    color: white;
+    padding: 8px 14px;
     border-radius: 8px;
-    margin-bottom: 10px;
-    background-color: #f9f9f9;
-}
-
-.quizTitle {
-    font-weight: 500;
-    color: #2c3e50;
-    text-decoration: none;
-}
-
-.quizTitle:hover {
-    text-decoration: underline;
-}
-
-.buttonDelete {
-    background-color: #e74c3c;
-    color: #fff;
     border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
     cursor: pointer;
 }
 
-.buttonDelete:hover {
-    background-color: #c0392b;
-}
-
-@media (max-width: 600px) {
-    .quizItem {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .buttonDelete {
-        margin-top: 8px;
-    }
+.deleteBtn:hover {
+    background: #b41f2e;
 }

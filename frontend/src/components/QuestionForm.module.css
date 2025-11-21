@@ -1,35 +1,51 @@
-.container {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+.card {
+    padding: 20px;
+    background: #f9f9fc;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    animation: slideIn 0.25s ease;
 }
 
-.label {
-    display: block;
-    font-weight: 500;
-    margin-bottom: 4px;
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .input,
 .select {
-    width: 100%;
-    padding: 6px 8px;
-    margin-bottom: 8px;
+    padding: 10px 12px;
+    font-size: 15px;
+    border-radius: 8px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    transition: border 0.25s ease;
+}
+
+.input:focus,
+.select:focus {
+    border-color: #007bff;
 }
 
 .buttonRemove {
-    background-color: #e74c3c;
-    color: #fff;
+    align-self: flex-end;
+    background: #dc3545;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
     border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
     cursor: pointer;
+    transition: background 0.2s ease;
 }
 
 .buttonRemove:hover {
-    background-color: #c0392b;
+    background: #c82333;
 }

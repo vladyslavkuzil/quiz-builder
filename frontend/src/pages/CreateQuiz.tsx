@@ -15,49 +15,46 @@ interface FormValues {
 }
 
 const CreateQuiz: React.FC = () => {
-  const { register, handleSubmit, control, reset } = useForm<FormValues>({
+  const { register, control, handleSubmit, reset } = useForm<FormValues>({
     defaultValues: {
       title: '',
-      questions: []
-    }
+      questions: [],
+    },
   });
 
   const { fields, append, remove } = useFieldArray({
     control,
-    name: 'questions'
+    name: 'questions',
   });
 
-  // ----------- SUBMIT -------------
   const onSubmit = async (data: FormValues) => {
     const formattedQuestions = data.questions.map(q => ({
-      ...q,
-      options: q.options ? q.options.split(',').map(opt => opt.trim()) : []
+      text: q.text,
+      type: q.type,
+      options: q.options ? q.options.split(',').map(o => o.trim()) : [],
     }));
 
     try {
-      const res = await fetch('http://localhost:4000/quizzes', {
+      const response = await fetch('http://localhost:4000/quizzes', {
         method: 'POST',
-        headers: { 
-          'Content-Type': 'application/json'
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           title: data.title,
-          questions: formattedQuestions
-        })
+          questions: formattedQuestions,
+        }),
       });
 
-      if (!res.ok) throw new Error('Failed request');
+      if (!response.ok) throw new Error('Failed to create quiz');
 
       alert('Quiz created successfully!');
       reset();
 
-    } catch (err) {
-      console.error(err);
-      alert('Failed to create quiz.');
+    } catch (error) {
+      console.error(error);
+      alert('Error creating quiz');
     }
   };
 
-  // ----------- RENDER -------------
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.container}>
       <h1>Create Quiz</h1>
