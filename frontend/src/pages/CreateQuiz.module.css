@@ -72,3 +72,21 @@ h1 {
 .buttonSubmit:hover {
     background: #0056b3;
 }
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .input,
+    .select {
+        font-size: 14px;
+    }
+
+    .buttonAdd,
+    .buttonSubmit,
+    .buttonRemove {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

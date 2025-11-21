@@ -1,16 +1,14 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, } from 'react-router-dom';
 import CreateQuiz from './pages/CreateQuiz';
 import QuizList from './pages/QuizList';
 import QuizDetail from './pages/QuizDetail';
+import Header from './components/Header';
 
 const App: React.FC = () => {
   return (
     <div style={{ padding: '20px' }}>
-      <nav style={{ marginBottom: '20px' }}>
-        <Link to="/create" style={{ marginRight: '10px' }}>Create Quiz</Link>
-        <Link to="/quizzes">All Quizzes</Link>
-      </nav>
+    <Header />
       <Routes>
         <Route path="/create" element={<CreateQuiz />} />
         <Route path="/quizzes" element={<QuizList />} />

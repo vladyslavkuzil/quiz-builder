@@ -49,3 +49,19 @@
 .buttonRemove:hover {
     background: #c82333;
 }
+@media (max-width: 768px) {
+    .card {
+        padding: 16px;
+    }
+
+    .input,
+    .select {
+        font-size: 14px;
+    }
+
+    .buttonAdd,
+    .buttonRemove {
+        padding: 8px;
+        font-size: 13px;
+    }
+}

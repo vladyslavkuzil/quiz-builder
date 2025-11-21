@@ -76,3 +76,10 @@ Click any quiz from the list.
 ✔ Delete a quiz
 
 Click the delete button next to a quiz item.
+
+Optional: Seed Sample Quiz
+
+To create a sample quiz in the database, run:
+
+cd backend
+ts-node seed.ts

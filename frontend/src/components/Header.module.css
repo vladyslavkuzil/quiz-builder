@@ -1,0 +1,17 @@
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 16px;
+    background: #007bff;
+}
+
+.link {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
