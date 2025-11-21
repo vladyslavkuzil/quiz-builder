@@ -1,0 +1,50 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.quizItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.quizTitle {
+    font-weight: 500;
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.quizTitle:hover {
+    text-decoration: underline;
+}
+
+.buttonDelete {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buttonDelete:hover {
+    background-color: #c0392b;
+}
+
+@media (max-width: 600px) {
+    .quizItem {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .buttonDelete {
+        margin-top: 8px;
+    }
+}

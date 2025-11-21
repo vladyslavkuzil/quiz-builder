@@ -1,0 +1,40 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.buttonAdd {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    margin-right: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buttonAdd:hover {
+    background-color: #2980b9;
+}
+
+.buttonSubmit {
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buttonSubmit:hover {
+    background-color: #27ae60;
+}

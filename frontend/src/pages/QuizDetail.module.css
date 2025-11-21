@@ -1,0 +1,30 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.question {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    background-color: #f9f9f9;
+}
+
+.questionTitle {
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.optionList {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+@media (max-width: 600px) {
+    .question {
+        padding: 8px;
+    }
+}

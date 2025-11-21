@@ -1,0 +1,35 @@
+.container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.input,
+.select {
+    width: 100%;
+    padding: 6px 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.buttonRemove {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buttonRemove:hover {
+    background-color: #c0392b;
+}
